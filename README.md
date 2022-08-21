@@ -1,10 +1,10 @@
-# Simple Todo Applications
+# Simple Todo Application
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Difining Actions
 
-In the project directory, you can run:
+
 
 ### `npm start`
 

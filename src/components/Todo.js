@@ -18,7 +18,7 @@ export default function Todo() {
             </div>
 
             <div className="select-none flex-1 line-through">
-                Learn React from Learn with Sumit YouTube Channel
+               This is my first todo notes
             </div>
 
             <div

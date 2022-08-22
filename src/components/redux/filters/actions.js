@@ -12,5 +12,5 @@ export const statusChanged=(status)=>{
     return{
         type:STATUSCHANGED,
         paylod:status
-    }
+    };
 }

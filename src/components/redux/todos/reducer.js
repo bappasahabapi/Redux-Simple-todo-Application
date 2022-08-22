@@ -54,7 +54,7 @@ const reducer =(state=initialState, action)=>{
             
    
     default:
-        state;
+       return state;
    }
 
 };

@@ -2,7 +2,8 @@
         1.  Setting Up the project
         2.  Difining the actions for todo slice and filter slice
         3.  Difining Reducer for  todo slice
-        4. store setup
+        4.  Difining Reducer for  filter slice
+        5. store setup
  
 ### 🟩Install 
       npm i redux react-redux

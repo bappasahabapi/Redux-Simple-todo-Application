@@ -2,7 +2,7 @@ import { initialState } from "./initialState";
 import {ADDED, TOGGLED, COLORSELECTED,DELETED, ALLCOMPLETED, CLEARCOMPLETED} from "./actionTypes";
 
 
-function nextTodoId = (todos)=>{
+const nextTodoId = (todos)=>{
         const maxId = todos.reduce((maxId, todo)=>Math.max(todo.Id, maxId), -1);
         return maxId+1;
 }
@@ -23,9 +23,9 @@ const reducer =(state=initialState, action)=>{
                 }
                 return{
                     ...todo,
-                    completed:!completed
+                    completed:!todo.completed,
                 }
-            })
+            });
 
         case COLORSELECTED:
             const {todoId, color} =action.payload;
@@ -37,11 +37,26 @@ const reducer =(state=initialState, action)=>{
                     ...todo,
                     color:color
                 }
-            })
+            });
+
+        case DELETED:
+            return state.filter(todo =>todo.id !== action.payload);
+           
+        case ALLCOMPLETED:
+            return state.map(todo =>{
+                return{
+                    ...todo,
+                    completed:true
+                }
+            });
+            case CLEARCOMPLETED:
+                    return state.filter(todo => !todo.completed)
             
    
     default:
-        break;
+        state;
    }
 
-}
+};
+
+export default reducer;

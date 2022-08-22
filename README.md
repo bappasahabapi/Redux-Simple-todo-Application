@@ -1,7 +1,7 @@
 # Simple Todo Application
         1.  Setting Up the project
-        2.  Difining the actions
-        3. Difining Reducer todo slice
+        2.  Difining the actions for todo slice and filter slice
+        3.  Difining Reducer for  todo slice
         4. store setup
  
 ### 🟩Install 

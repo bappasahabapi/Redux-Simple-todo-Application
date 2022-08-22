@@ -18,7 +18,7 @@
 
 ### 🟩 Todos 
 
- ➡ 1. actionTypes.js
+➡ 1. actionTypes.js
     ````js
         export const ADDED ="todos/added";
         export const TOGGLED ="todos/toggled";

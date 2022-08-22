@@ -18,7 +18,7 @@
 
 ### 🟩 Todos 
 
- 1. actionTypes.js
+ ➡ 1. actionTypes.js
     ````js
         export const ADDED ="todos/added";
         export const TOGGLED ="todos/toggled";
@@ -29,7 +29,7 @@
 
     ````
        
-2. actions.js(here we make action creator )
+ ➡ 2. actions.js(here we make action creator )
 
     ````js
       import {ADDED, TOGGLED, COLORSELECTED,DELETED, ALLCOMPLETED, CLEARCOMPLETED} from "./actionTypes";
@@ -76,7 +76,7 @@
     }  
     ````
 
-3. initialState.js
+ ➡ 3. initialState.js
 
     ````js
     export const initialState =[
@@ -95,7 +95,7 @@
         export default initialState;
 
     ````
-3. reducer.js
+ ➡ 4. reducer.js
 
     ````js
     import { initialState } from "./initialState";

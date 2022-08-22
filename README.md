@@ -5,6 +5,8 @@
         4.  Difining Reducer for  filter slice
         5.  Making rootReducer
             Store setup
+        ➡FUNCTIONAL WORK STARTS
+        6. Todo List and Todo(use state & dispatch actions)
  
 ### 🟩Install 
       npm i redux react-redux
@@ -16,7 +18,7 @@
 
 ## Difining Actions 
 
-### 🟩 Todos 
+# 🟩 Todos 
 
 1. actionTypes.js
 
@@ -166,8 +168,95 @@
 
 
 
+# 🟩 Filters slice
 
+
+1. actionTypes.js
+
+    ````js
+        export const STATUSCHANGED ="filters/statusChanged";
+        export const COLORCHANGED ="filters/colorChanged";
+
+
+    ````
+
+2. actions.js(here we make action creator )
+
+    ````js
     
+    import {COLORCHANGED, STATUSCHANGED} from './actionTypes';
+    export const colorChanged=(color, changeType)=>{
+    return{
+        type:COLORCHANGED,
+        paylod:{
+            color, 
+            changeType
+        }
+    }
+    }
+    export const statusChanged=(status)=>{
+    return{
+        type:STATUSCHANGED,
+        paylod:status
+    };
+}  
+    ````
+3. initialState.js
+
+    ````js
+        const initialState={
+            status:"All",
+            colors:[]
+         }
+        export default initialState;
+    ````
+
+
+4. reducer.js
+````js
+        import {COLORCHANGED, STATUSCHANGED} from './actionTypes';
+        import initialState from './initialState';
+
+
+
+        const reducer =(state=initialState,action)=>{
+            switch (action.type) {
+                case STATUSCHANGED:
+                    return{
+                        ...state,
+                        status:action.payload
+                    }
+                case COLORCHANGED:
+                    const {color, changeType}=action.payload
+                    
+                    switch (changeType) {
+                        case 'added':
+                            return{
+                                ...state,
+                                colors:[
+                                    ...state,
+                                    color
+                                ]
+                            }
+                        case 'removed':
+                            return{
+                                ...state,
+                                colors:state.colors.filter(existingColor =>existingColor!== color)
+                            }
+                    
+                        default:
+                            return state;
+                    }
+                    
+                
             
+                default:
+                    return state;
+            }
+        }
+
+        export default reducer;
+````
+
 
 

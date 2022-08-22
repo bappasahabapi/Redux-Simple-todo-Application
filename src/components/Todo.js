@@ -1,5 +1,5 @@
 
-import { useDispatch } from 'react-redux/es/exports';
+import { useDispatch } from 'react-redux';
 import React from 'react';
 import cancelImage from '../assets/images/cancel.png';
 import{toggled, colorselected, deleted} from '../components/redux/todos/actions';

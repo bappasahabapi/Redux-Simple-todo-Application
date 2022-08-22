@@ -4,9 +4,14 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import TodoList from './components/TodoList';
 import Footer from './Footer';
+import {Provider} from "react-redux";
+import store from './components/redux/store';
 
 function App() {
   return (
+    <Provider store={store}>
+
+   
     <div
       className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
       <Navbar></Navbar>
@@ -19,6 +24,8 @@ function App() {
         <Footer />
       </div>
     </div>
+
+    </Provider>
   );
 }
 

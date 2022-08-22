@@ -3,10 +3,12 @@
         2.  Difining the actions for todo slice and filter slice
         3.  Difining Reducer for  todo slice
         4.  Difining Reducer for  filter slice
-        5. store setup
+        5.  Making rootReducer
+            Store setup
  
 ### 🟩Install 
       npm i redux react-redux
+      npm i redux-devtools-extension
 
 ### The whole application has two parts
     1. Todo part

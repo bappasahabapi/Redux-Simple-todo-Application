@@ -2,7 +2,7 @@ export const initialState =[
     {
         id:1 ,
         text:'Hasib Vai Todo list Assignment',
-        completed:ture
+        completed:true
     },
     {
         id:2,
@@ -10,4 +10,5 @@ export const initialState =[
         completed:false,
         color:'red'
     }
-]
+];
+export default initialState;
